@@ -57,19 +57,25 @@ public class palindrome {
         //My strings array to check
         myStrings = new String[]{
                 "Rotor",
+                "RotoR",
                 "aNnA",
+                "anna",
                 "step on no pets",
                 "Java",
                 "121",
                 "Xanax",
+                "xanax",
                 "1 xanax 1",
                 "1 xanax 2"
         };
 
         for ( String oneString : myStrings ) {
 
-            if( ! isPalindrome( oneString ) ){
-                result = "not";
+            if( isPalindrome( oneString ) ){
+                result = "";
+            }
+            else{
+                result = " not";
             }
 
             System.out.println(String.format( "'%s' is %s a palindrome", oneString, result ) );
